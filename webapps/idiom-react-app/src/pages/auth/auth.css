@@ -1,0 +1,10 @@
+.auth_container {
+    margin-top: 10px;
+    width: 50%;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.button {
+    background-color: #004aad;
+}

@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <h2>Quiz Game</h2>
+    <div id="status">Waiting for other player...</div>
+    <div id="progress"></div>
+    <button id="next-question" class="btn btn-primary mt-3">Next Question</button>
+</div>
+
+<script>
+    const userId = 1;
+    const player = 'Player '+userId;
+    const socket = new WebSocket(`ws://${window.location.host}/ws/battle/${userId}/`);
+    let progress = 0;
+
+    socket.onopen = function(event) {
+        console.log("Connected to WebSocket");
+    };
+
+    socket.onmessage = function(event) {
+        const data = JSON.parse(event.data);
+        if (data.type === 'player_joined') {
+            document.getElementById('status').innerText = data.message;
+        } else if (data.type === 'opponent_left') {
+            document.getElementById('status').innerText = data.message;
+        } else if (data.type === 'progress') {
+            document.getElementById('progress').innerText = `${data.player}: ${data.progress}/10`;
+        } else if (data.type === 'result') {
+            alert(`${data.player} finished with a score of ${data.score}`);
+        }
+    };
+
+    document.getElementById('next-question').addEventListener('click', () => {
+        if (progress < 10) {
+            progress++;
+            socket.send(JSON.stringify({
+                action: 'progress_update',
+                player: player,
+                progress: progress
+            }));
+
+            if (progress === 10) {
+                const score = Math.floor(Math.random() * 11);
+                socket.send(JSON.stringify({
+                    action: 'complete',
+                    player: player,
+                    score: score
+                }));
+            }
+        }
+    });
+</script>

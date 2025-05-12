@@ -1,0 +1,36 @@
+<!-- extend base.html -->
+{% extends 'idiomapp/base.html' %}
+
+{% block extra_css %}
+{% load static %}
+<link href="{% static 'css/homepage.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="hero-section position-relative band">
+        <div class="container text-center">
+            <h2 class="main-title">Discover the Charm of Chinese Idioms!</h2>
+            <button class="btn btn-primary start-btn">Start Learning</button>
+        </div>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="container my-4 btn-sec">
+        <div class="row text-center buttons-container">
+            <div class="col-md-3 mb-3">
+                <button class="btn text-white" style="background-color: #77d1c1;">Flash Cards</button>
+            </div>
+            <div class="col-md-3 mb-3">
+                <button class="btn text-white" style="background-color: #0097b2;">Game Battle</button>
+            </div>
+            <div class="col-md-3 mb-3">
+                <button class="btn text-white" style="background-color: #004aad;">Self Test</button>
+            </div>
+            <div class="col-md-3 mb-3">
+                <button class="btn text-white" style="background-color: #7b3ff1;">My Idioms</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

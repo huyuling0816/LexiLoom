@@ -1,0 +1,50 @@
+<!-- extend base.html -->
+{% extends 'idiomapp/base.html' %}
+
+{% block extra_css %}
+{% load static %}
+<link href="{% static 'css/flash_cards.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="container">
+    <div class="text-center mt-5">
+      <div class="text-white flash-card">
+        <h1>fǎn pú guī zhēn</h1>
+        <h2>返璞归真</h2>
+      </div>
+      <div class="mt-3 d-flex justify-content-center">
+        <button class="btn fav">Add to Favorites</button>
+        <button class="btn next">Next</button>
+      </div>
+    </div>
+  </div>
+ -->
+
+
+<div class="container">
+  <div class="text-center mt-5">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front text-white flash-card">
+            <h2>fǎn pú guī zhēn</h1>
+            <h1>返璞归真</h2>
+        </div>
+        <div class="flip-card-back text-white flash-card">
+          <h2>fǎn pú guī zhēn</h1>
+          <h1>返璞归真</h2>
+          <br>
+          <h1>Back to Nature</h3>
+          <p>返: Back; 璞: Unpolished Gem; 归: Return; 真: Real.</p>
+          <p>To start living a more simple life, often in the country.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3 d-flex justify-content-center">
+      <button class="btn fav">Add to Favorites</button>
+      <button class="btn next">Next</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,91 @@
+.collection-container {
+    padding: 20px;
+}
+
+.idiom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.idiom-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #dcd6f7;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.idiom-left {
+    background-color: #4b6cb7;
+    color: white;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+    min-width: 150px;
+    width: 25%;
+}
+
+.idiom-pron {
+    font-size: 18px;
+}
+
+.idiom-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.idiom-middle {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.idiom-translation {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.idiom-explanation {
+    font-size: 16px;
+}
+
+.idiom-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.small-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background-color: #7c4dff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.small-btn:hover {
+    background-color: #683de4;
+    transform: scale(1.05);
+}
+
+.small-btn.danger {
+    background-color: #e53935;
+}
+
+.small-btn.danger:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+
+

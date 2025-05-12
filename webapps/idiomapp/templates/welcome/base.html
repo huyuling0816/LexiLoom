@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    {% load static %}
+		<link href="{% static 'welcome/base.css' %}" rel="stylesheet" type="text/css">
+		<title> Model Examples </title>
+	</head>
+
+	<body>
+		<div class="big-heading">
+			Model Examples
+		</div>
+
+	    <div class="user-info">
+			{% block user-info %}
+			{% endblock %}
+	    </div>
+
+	    {% if message %}
+	        <div class="message">
+	            {{ message }}
+	        </div>
+	    {% endif %}
+
+	    <div class="content">
+		    {% block content %}
+		    {% endblock %}
+		</div>
+	</body>
+</html>

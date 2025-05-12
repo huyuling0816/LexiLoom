@@ -1,0 +1,74 @@
+.logo {
+    color: #5812E7;
+}
+
+.container-fluid {
+    padding: 0% 3%;
+}
+
+.navbar-adjust {
+    padding: 0% 5%;
+}
+
+#user_button {
+    background-color: #5812E7;
+    color: white;
+    font-weight: bold;
+}
+
+#log_out_button {
+    background-color: white;
+    color: #5812E7;
+    border: 1px solid #5812E7;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+    color: #5812E7 !important;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-link {
+    text-decoration: none; 
+    color: inherit;          
+}
+
+.btn-purple {
+    background-color: #5812E7;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #5812E7;
+}
+
+.btn-purple:hover {
+    background-color: transparent;
+    border: 2px solid #5812E7;
+    color: #5812E7;
+    border-radius: 10px;
+}
+
+.btn-outline-purple {
+    background-color: transparent;
+    border: 2px solid #5812E7;
+    color: #5812E7;
+    border-radius: 10px;
+}
+
+.btn-outline-purple:hover {
+    background-color: #5812E7;
+    color: white;
+    border: 2px solid #5812E7;
+    border-radius: 10px;
+}
+
+
+.active-link {
+    color: #5812E7 !important; /* 蓝色高亮 */
+    font-weight: bold;
+}
+
